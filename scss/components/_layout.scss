@@ -1,0 +1,283 @@
+/*-----------------VARIABLES-----------------*/
+
+%grid-c {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  width: 90%;
+  max-width: 1100px;
+  height: 100%;
+  margin: auto;
+  gap: 10px;
+  overflow: hidden;
+  align-items: center;
+}
+
+/*------------------ FONTS -----------------*/
+$noto: "Noto Serif", serif;
+$acumin: "acumin-pro", sans-serif;
+/*------------------------------------------*/
+
+/*------------------ TEXTS -----------------*/
+$title-size: 24px;
+$subtitle-size: 18px;
+$paraph-size: 14px;
+$menu-size: 14px;
+/*------------------------------------------*/
+
+/*------------------GENERAL-----------------*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+.site-body {
+  background: $color-cream;
+}
+
+/*------------------------------------------*/
+
+/*------------------LAYOUT------------------*/
+//HEADER
+$header-l: ".header-l";
+$header: ".header";
+$menu: ".menu";
+
+#{$header-l} {
+  height: 80px;
+  background: none;
+
+  &__grid {
+    @extend %grid;
+  }
+
+  &__menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    grid-column: 4/9;
+    background: none;
+  }
+  &__menu li {
+    list-style: none;
+    font-family: $noto;
+    font-size: $menu-size;
+  }
+
+  &__menu a {
+    font-family: $noto;
+    font-size: $menu-size;
+  }
+}
+
+#{$header} {
+  height: 260px;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &__grid {
+    @extend %grid;
+  }
+
+  &__nav {
+    height: 260px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-column: 4/9;
+    grid-row: 1/-1;
+  }
+
+  &__menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background: none;
+  }
+
+  &__menu li {
+    list-style: none;
+  }
+
+  &__menu ul {
+    width: 100%;
+  }
+
+  &__menu a {
+    font-family: $noto;
+    font-size: $menu-size;
+  }
+}
+
+#{$menu} {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  grid-column: 4/9;
+  background: none;
+
+  &__item a {
+    color: $color-green;
+    text-decoration: none;
+  }
+  &__item a:hover {
+    color: $color-lima;
+  }
+}
+
+//MAIN
+$main: ".main";
+
+#{$main} {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  width: 100%;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    grid-column: 1/-1;
+    margin: 50px 0 50px 0;
+  }
+
+  &__grid {
+    @extend %grid;
+  }
+
+  &__top-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__bottom-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+//FOOTER
+$footer: ".footer";
+$data: ".data";
+$social: ".social";
+
+#{$footer} {
+  display: flex;
+  width: 100%;
+  height: 240px;
+  background: black;
+
+  &__grid {
+    @extend %grid;
+  }
+
+  &__data {
+    width: 100%;
+    height: 80%;
+    grid-column: 1/5;
+    display: flex;
+    flex-direction: column;
+    color: $color-white;
+    justify-content: center;
+  }
+
+  &__data li {
+    list-style: none;
+  }
+
+  &__social {
+    width: 100%;
+    height: 80%;
+    grid-column: 9/12;
+    display: flex;
+    color: $color-white;
+    align-items: center;
+  }
+
+  &__social li {
+    list-style: none;
+  }
+
+  &__social a {
+    text-decoration: none;
+    color: $color-white;
+  }
+}
+
+#{$data} {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  &__item {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+#{$social} {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: space-evenly;
+
+  &__link {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__link li a:hover {
+    color: $color-green;
+  }
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*------------------------------------------*/

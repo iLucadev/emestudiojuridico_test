@@ -1,0 +1,80 @@
+/*---------------- VARIABLES ----------------*/
+
+%grid {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  width: 90%;
+  max-width: 1100px;
+  height: 100%;
+  margin: auto;
+  gap: 10px;
+  overflow: hidden;
+  align-items: center;
+}
+
+/*------------------------------------------*/
+
+/*------------------ FONTS -----------------*/
+$noto: "Noto Serif", serif;
+$acumin: "acumin-pro", sans-serif;
+/*------------------------------------------*/
+
+/*------------------ TEXTS -----------------*/
+$title-size: 24px;
+$subtitle-size: 18px;
+$paraph-size: 14px;
+$menu-size: 14px;
+/*------------------------------------------*/
+
+/*------------------ MEDIA -----------------*/
+$media-gw: 100%;
+$media-bw: 630px;
+$media-mw: 390px;
+$media-sw: 240px;
+/*------------------------------------------*/
+
+/*------------------ COLOR -----------------*/
+$color-white: #edf0f1;
+$color-gray: #595351;
+$color-cream: #f2ede4;
+$color-green: #4ea69d;
+$color-brown: #8c7f77;
+$color-lima: #bfd9d4;
+$box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+/*------------------------------------------*/
+
+/*------------------------------------------*/
+
+$texts: ".texts";
+
+#{$texts} {
+  &__title {
+    font-family: $noto;
+    font-size: $title-size;
+  }
+
+  &__paraph {
+    font-family: $acumin;
+    font-size: $paraph-size;
+  }
+
+  &__subtitle {
+    font-family: $noto;
+    font-size: $subtitle-size;
+  }
+}
+
+$images: ".images";
+#{$images} {
+  &__img-b {
+    width: $media-bw;
+  }
+
+  &__img-m {
+    width: $media-mw;
+  }
+
+  &__img-s {
+    width: $media-sw;
+  }
+}
