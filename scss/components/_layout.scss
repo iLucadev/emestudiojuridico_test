@@ -1,31 +1,3 @@
-/*-----------------VARIABLES-----------------*/
-
-%grid-c {
-  display: grid;
-  grid-template-columns: repeat(11, 1fr);
-  width: 90%;
-  max-width: 1100px;
-  height: 100%;
-  margin: auto;
-  gap: 10px;
-  overflow: hidden;
-  align-items: center;
-}
-
-/*------------------ FONTS -----------------*/
-$noto: "Noto Serif", serif;
-$acumin: "acumin-pro", sans-serif;
-/*------------------------------------------*/
-
-/*------------------ TEXTS -----------------*/
-$title-size: 24px;
-$subtitle-size: 18px;
-$paraph-size: 14px;
-$menu-size: 14px;
-/*------------------------------------------*/
-
-/*------------------GENERAL-----------------*/
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -33,251 +5,131 @@ $menu-size: 14px;
 }
 
 body {
-  width: 100%;
   height: 100vh;
+  width: 100%;
+  font-size: 16px;
 }
 
-.site-body {
-  background: $color-cream;
+.container {
+  grid-column: 1/-1;
+  padding: 0 24px 0 24px;
+  max-width: $max-width;
 }
 
-/*------------------------------------------*/
-
-/*------------------LAYOUT------------------*/
-//HEADER
-$header-l: ".header-l";
-$header: ".header";
-$menu: ".menu";
-
-#{$header-l} {
-  height: 80px;
-  background: none;
-
-  &__grid {
-    @extend %grid;
-  }
-
-  &__menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    grid-column: 4/9;
-    background: none;
-  }
-  &__menu li {
-    list-style: none;
-    font-family: $noto;
-    font-size: $menu-size;
-  }
-
-  &__menu a {
-    font-family: $noto;
-    font-size: $menu-size;
-  }
-}
-
-#{$header} {
-  height: 260px;
-  background: none;
+.secondary-menu {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  width: 300px;
+  background: none;
 
-  &__grid {
-    @extend %grid;
-  }
-
-  &__nav {
-    height: 260px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    grid-column: 4/9;
-    grid-row: 1/-1;
-  }
-
-  &__menu {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    background: none;
-  }
-
-  &__menu li {
+  li {
     list-style: none;
   }
 
-  &__menu ul {
+  ul {
     width: 100%;
   }
-
-  &__menu a {
-    font-family: $noto;
-    font-size: $menu-size;
-  }
 }
 
-#{$menu} {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  grid-column: 4/9;
-  background: none;
-
-  &__item a {
-    color: $color-green;
-    text-decoration: none;
-  }
-  &__item a:hover {
-    color: $color-lima;
-  }
-}
-
-//MAIN
 $main: ".main";
 
 #{$main} {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-self: center;
   background: none;
-  width: 100%;
+  max-width: 1290px;
 
-  &__container {
+  &__section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width: 100%;
-    grid-column: 1/-1;
-    margin: 50px 0 50px 0;
   }
 
-  &__grid {
-    @extend %grid;
-  }
-
-  &__top-content {
+  &__menu {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
+    width: 210px;
+    background: none;
 
-  &__center-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
+    li {
+      list-style: none;
+    }
 
-  &__bottom-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    ul {
+      width: 100%;
+    }
   }
 }
 
-//FOOTER
-$footer: ".footer";
-$data: ".data";
-$social: ".social";
+$content: ".content";
 
-#{$footer} {
-  display: flex;
+#{$content} {
   width: 100%;
-  height: 240px;
-  background: black;
+  display: flex;
 
-  &__grid {
-    @extend %grid;
-  }
-
-  &__data {
-    width: 100%;
-    height: 80%;
-    grid-column: 1/5;
+  &__column {
     display: flex;
     flex-direction: column;
-    color: $color-white;
-    justify-content: center;
   }
 
-  &__data li {
-    list-style: none;
-  }
-
-  &__social {
-    width: 100%;
-    height: 80%;
-    grid-column: 9/12;
+  &__media {
     display: flex;
-    color: $color-white;
-    align-items: center;
+    overflow: hidden;
   }
 
-  &__social li {
-    list-style: none;
-  }
-
-  &__social a {
-    text-decoration: none;
-    color: $color-white;
-  }
-}
-
-#{$data} {
-  width: 100%;
-  height: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-
-  &__item {
-    width: 100%;
-    height: 60%;
+  &__row {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-}
-
-#{$social} {
-  width: 100%;
-  height: 40%;
-  display: flex;
-  justify-content: space-evenly;
-
-  &__link {
     width: 100%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  &__link li a:hover {
-    color: $color-green;
   }
 }
 
-.social-media {
+/*------------------ TEXTS -----------------*/
+$texts: ".texts";
+
+#{$texts} {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+
+  &__title {
+    font-family: $font-primary;
+    font-size: $font-title-size;
+    font-weight: 400;
+    display: flex;
+  }
+
+  &__title-alt {
+    font-family: $font-secondary;
+    font-size: $font-title-alt-size;
+    font-weight: 400;
+    display: flex;
+  }
+
+  &__subtitle {
+    font-family: $font-primary;
+    font-size: $font-subtitle-size;
+    font-weight: 400;
+    display: flex;
+  }
+
+  &__paraph {
+    font-family: $font-primary;
+    font-size: $font-paraph-size;
+    font-weight: 400;
+    display: flex;
+  }
 }
 
+/*------------------ MEDIA -----------------*/
+$media: ".media";
+
+#{$media} {
+  display: flex;
+  max-height: 320px;
+}
+
+.m-relative {
+  position: relative;
+  top: 290px;
+  left: -180px;
+}
 /*------------------------------------------*/

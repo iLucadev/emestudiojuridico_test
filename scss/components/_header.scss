@@ -1,0 +1,56 @@
+//HEADER
+$header: ".header";
+$menu: ".menu";
+
+#{$header} {
+  grid-column: 1/-1;
+  grid-row: 1;
+  background: none;
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+  padding: 24px 24px 0 24px;
+
+  &__menu {
+    background: none;
+    width: 540px;
+
+    li {
+      list-style: none;
+    }
+
+    ul {
+      width: 100%;
+    }
+  }
+}
+
+#{$menu} {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: none;
+  height: 100%;
+  width: 100%;
+
+  &__item-w a {
+    color: $color-w;
+    text-decoration: none;
+    font-family: $font-secondary;
+    font-size: $font-menu-size;
+  }
+  &__item-w a:hover {
+    text-decoration: underline;
+  }
+
+  &__item-c a {
+    color: $color-p;
+    text-decoration: none;
+    font-family: $font-secondary;
+    font-size: $font-menu-size;
+  }
+  &__item-c a:hover {
+    text-decoration: underline;
+  }
+}

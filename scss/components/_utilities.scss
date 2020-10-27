@@ -1,80 +1,164 @@
-/*---------------- VARIABLES ----------------*/
+/*------------------ FONTS -----------------*/
 
-%grid {
-  display: grid;
-  grid-template-columns: repeat(11, 1fr);
-  width: 90%;
-  max-width: 1100px;
-  height: 100%;
-  margin: auto;
-  gap: 10px;
-  overflow: hidden;
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rosarivo:ital@1&display=swap");
+
+$font-sizes: (
+  title: 2.5rem,
+  title-alt: 1.5rem,
+  subtitle: 2rem,
+  paraph: 1.25rem,
+  menu: 1rem,
+  emphasis: 3.5rem,
+);
+
+@function font-size($size) {
+  @return map-get($map: $font-sizes, $key: $size);
+}
+
+$font-title-size: font-size(title);
+
+$font-title-alt-size: font-size(title-alt);
+
+$font-subtitle-size: font-size(subtitle);
+
+$font-paraph-size: font-size(paraph);
+
+$font-menu-size: font-size(menu);
+
+$font-emphasis-size: font-size(emphasis);
+
+$font-logo: "Yeseva One", cursive;
+
+$font-primary: "Prata", serif;
+
+$font-secondary: "Hind", sans-serif;
+
+$font-third: "Rosarivo", serif;
+
+/*------------------------------------------*/
+
+/*----------------- COLORS -----------------*/
+$colors: (
+  primary: #412236,
+  secondary: #e33f5b,
+  third: #f8dcda,
+  fourth: #dfab67,
+  blanco: #fff,
+  negro: black,
+);
+
+@function colors($color) {
+  @return map-get($map: $colors, $key: $color);
+}
+
+$color-p: colors(primary);
+
+$color-s: colors(secondary);
+
+$color-t: colors(third);
+
+$color-f: colors(fourth);
+
+$color-w: colors(blanco);
+
+$color-b: colors(negro);
+
+.c-blanco {
+  color: $color-w;
+}
+
+.c-negro {
+  color: $color-b;
+}
+
+.c-primary {
+  color: $color-p;
+}
+
+.c-secondary {
+  color: $color-s;
+}
+
+.c-third {
+  color: $color-t;
+}
+
+.c-fourth {
+  color: $color-f;
+}
+
+/*--------------- BACKGROUND ---------------*/
+
+.bg-transparent {
+  background: none;
+}
+
+.bg-colored {
+  background-color: rgba($color: #e33f5b, $alpha: 0.4);
+}
+
+/*---------------- ALIGNMENT ---------------*/
+
+.h-center {
+  justify-content: center;
+}
+
+.h-start {
+  justify-content: flex-start;
+}
+
+.h-end {
+  justify-content: flex-end;
+}
+
+.h-evenly {
+  align-items: space-evenly;
+}
+
+.h-between {
+  align-items: space-between;
+}
+
+.h-around {
+  align-items: space-around;
+}
+
+.v-center {
   align-items: center;
 }
 
-/*------------------------------------------*/
-
-/*------------------ FONTS -----------------*/
-$noto: "Noto Serif", serif;
-$acumin: "acumin-pro", sans-serif;
-/*------------------------------------------*/
-
-/*------------------ TEXTS -----------------*/
-$title-size: 24px;
-$subtitle-size: 18px;
-$paraph-size: 14px;
-$menu-size: 14px;
-/*------------------------------------------*/
-
-/*------------------ MEDIA -----------------*/
-$media-gw: 100%;
-$media-bw: 630px;
-$media-mw: 390px;
-$media-sw: 240px;
-/*------------------------------------------*/
-
-/*------------------ COLOR -----------------*/
-$color-white: #edf0f1;
-$color-gray: #595351;
-$color-cream: #f2ede4;
-$color-green: #4ea69d;
-$color-brown: #8c7f77;
-$color-lima: #bfd9d4;
-$box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
-/*------------------------------------------*/
-
-/*------------------------------------------*/
-
-$texts: ".texts";
-
-#{$texts} {
-  &__title {
-    font-family: $noto;
-    font-size: $title-size;
-  }
-
-  &__paraph {
-    font-family: $acumin;
-    font-size: $paraph-size;
-  }
-
-  &__subtitle {
-    font-family: $noto;
-    font-size: $subtitle-size;
-  }
+.v-start {
+  align-items: flex-start;
 }
 
-$images: ".images";
-#{$images} {
-  &__img-b {
-    width: $media-bw;
-  }
+.v-end {
+  align-items: flex-end;
+}
 
-  &__img-m {
-    width: $media-mw;
-  }
+.v-evenly {
+  justify-content: space-evenly;
+}
 
-  &__img-s {
-    width: $media-sw;
-  }
+.v-between {
+  justify-content: space-between;
+}
+
+.v-around {
+  justify-content: space-around;
+}
+
+/*------------------------------------------*/
+.column {
+  flex-direction: column;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.padding-20 {
+  padding: 20px;
 }
