@@ -451,11 +451,17 @@ body {
 #about #team .container .box-3 {
   grid-column: 3/5;
   grid-row: 2; }
+  #about #team .container .box-3 .texts {
+    display: flex;
+    flex-direction: column; }
 
 #about #team .container .box-4 {
   grid-column: 1/3;
   grid-row: 3;
   height: 300px; }
+  #about #team .container .box-4 .texts {
+    display: flex;
+    flex-direction: column; }
 
 #about #team .container .box-5 {
   grid-column: 3/5;
@@ -469,6 +475,9 @@ body {
 #about #team .container .box-7 {
   grid-column: 3/5;
   grid-row: 4; }
+  #about #team .container .box-7 .texts {
+    display: flex;
+    flex-direction: column; }
 
 /*------------------------------------------*/
 /*---------------- SERVICES ----------------*/
@@ -491,10 +500,16 @@ body {
 #works #our-works .container .box-4 {
   grid-column: 3/5;
   grid-row: 3; }
+  #works #our-works .container .box-4 .texts {
+    display: flex;
+    flex-direction: column; }
 
 #works #our-works .container .box-5 {
   grid-column: 1/3;
   grid-row: 4; }
+  #works #our-works .container .box-5 .texts {
+    display: flex;
+    flex-direction: column; }
 
 #works #our-works .container .box-6 {
   grid-column: 3/5;
@@ -503,6 +518,13 @@ body {
 #works #our-works .container .box-7 {
   grid-column: 1/3;
   grid-row: 5; }
+
+#works #our-works .container .box-8 {
+  grid-column: 3/5;
+  grid-row: 5; }
+  #works #our-works .container .box-8 .texts {
+    display: flex;
+    flex-direction: column; }
 
 /*------------------------------------------*/
 /*---------------- CONTACT -----------------*/

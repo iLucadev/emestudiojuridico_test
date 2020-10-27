@@ -33,11 +33,19 @@
   .box-4 {
     grid-column: 3/5;
     grid-row: 3;
+    .texts {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   .box-5 {
     grid-column: 1/3;
     grid-row: 4;
+    .texts {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   .box-6 {
@@ -48,6 +56,15 @@
   .box-7 {
     grid-column: 1/3;
     grid-row: 5;
+  }
+
+  .box-8 {
+    grid-column: 3/5;
+    grid-row: 5;
+    .texts {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 
