@@ -24,6 +24,21 @@ $menu: ".menu";
       width: 100%;
     }
   }
+
+  @include breakpoint(mobile) {
+    padding: 10px;
+    flex-wrap: wrap;
+
+    .header__menu {
+      min-width: 300px;
+      width: 100%;
+    }
+  }
+  @include breakpoint(tablet) {
+    .header__menu {
+      min-width: 640px;
+    }
+  }
 }
 
 #{$menu} {

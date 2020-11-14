@@ -45,6 +45,21 @@ $social: ".social";
     text-decoration: none;
     color: $color-w;
   }
+
+  @include breakpoint(mobile) {
+    .footer__data {
+      width: 320px;
+
+      .data__item {
+        text-align: center;
+      }
+    }
+  }
+  @include breakpoint(tablet) {
+    .footer__data {
+      width: 640px;
+    }
+  }
 }
 
 #{$data} {

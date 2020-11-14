@@ -11,9 +11,9 @@ body {
 }
 
 .container {
-  grid-column: 1/-1;
   padding: 0 24px 0 24px;
   max-width: $max-width;
+  min-width: $min-width;
 }
 
 .secondary-menu {
@@ -118,18 +118,3 @@ $texts: ".texts";
     display: flex;
   }
 }
-
-/*------------------ MEDIA -----------------*/
-$media: ".media";
-
-#{$media} {
-  display: flex;
-  max-height: 320px;
-}
-
-.m-relative {
-  position: relative;
-  top: 290px;
-  left: -180px;
-}
-/*------------------------------------------*/

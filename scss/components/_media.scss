@@ -1,110 +1,18 @@
 /*------------------ MEDIA -----------------*/
 
-@media screen and (min-width: 480px) and (max-width: 576px) {
-  footer .grid {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    height: max-content;
-    grid-column: 3/10;
-    height: fit-content;
-  }
-
-  footer .footer-texts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 65%;
-  }
-
-  .footer-links {
-    grid-column: 4/9;
-    height: 35%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  header .grid {
-    grid-column: 1/12;
-  }
-
-  header .grid .nav-menu {
-    grid-column: 1/12;
-  }
-}
-
-@media screen and (min-width: 576px) and (max-width: 768px) {
-  .footer-texts {
-    grid-column: 1/6;
-    width: 100%;
-  }
-
-  .footer-text {
-    width: 100%;
-    height: 80%;
-  }
-
-  .footer-links {
-    grid-column: 7/12;
-  }
-
-  header .grid {
-    grid-column: 1/12;
-  }
-
-  header .grid .nav-menu {
-    grid-column: 1/12;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .footer-texts {
-    grid-column: 1/6;
-    width: 100%;
-  }
-
-  .footer-text {
-    width: 100%;
-    height: 80%;
-  }
-
-  .footer-links {
-    grid-column: 7/12;
-  }
-
-  header .grid {
-    grid-column: 2/11;
-  }
-
-  header .grid .nav-menu {
-    grid-column: 2/11;
-  }
-}
-
-@media screen and (min-width: 992px) and (max-width: 1200px) {
-  .footer-texts {
-    grid-column: 1/5;
-    width: 100%;
-  }
-
-  .footer-text {
-    width: 100%;
-    height: 80%;
-  }
-
-  .footer-links {
-    grid-column: 8/12;
-  }
-
-  header .grid {
-    grid-column: 1/-1;
-  }
-
-  header .grid .nav-menu {
-    grid-column: 1/-1;
+@mixin breakpoint($point) {
+  @if $point == mobile {
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media screen and (min-width: 640px) and (max-width: 767px) {
+      @content;
+    }
+  } @else if $point == desktop {
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      @content;
+    }
   }
 }
 

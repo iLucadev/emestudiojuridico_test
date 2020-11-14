@@ -1,13 +1,13 @@
-/*------------ MIXINS&VARIABLES ------------*/
-
-@import "./components/mixins";
-
-/*------------------------------------------*/
-
 /*----------- VARIABLES&UTILITIES ----------*/
 
 @import "./components/variables";
 @import "./components/utilities";
+
+/*------------------------------------------*/
+
+/*----------------- MEDIAQ -----------------*/
+
+@import "./components/media";
 
 /*------------------------------------------*/
 
@@ -23,11 +23,5 @@
 @import "./components/works";
 @import "./components/contact";
 @import "./components/login";
-
-/*------------------------------------------*/
-
-/*----------------- MEDIAQ -----------------*/
-
-@import "./components/media";
 
 /*------------------------------------------*/

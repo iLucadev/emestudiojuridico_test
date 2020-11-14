@@ -100,7 +100,16 @@ $color-b: colors(negro);
   background-color: rgba($color: #e33f5b, $alpha: 0.4);
 }
 
-/*---------------- ALIGNMENT ---------------*/
+/*------------- MODIFICADORES --------------*/
+//FLEX
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
 
 .h-center {
   justify-content: center;
@@ -150,15 +159,39 @@ $color-b: colors(negro);
   justify-content: space-around;
 }
 
-/*------------------------------------------*/
-.column {
-  flex-direction: column;
+//DIMENSIONS
+.height-100 {
+  height: 100%;
 }
 
 .width-50 {
   width: 50%;
 }
 
+//BOXMODEL
+
+.padding-30 {
+  padding: 30px;
+}
+
 .padding-20 {
   padding: 20px;
 }
+
+//BUTTONS
+.button-l {
+  width: 160px;
+  height: 40px;
+  border: 1px solid $color-p;
+
+  a {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: $color-p;
+  }
+}
+
+/*------------------------------------------*/
