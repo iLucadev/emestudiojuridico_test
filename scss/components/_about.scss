@@ -141,7 +141,7 @@
 }
 
 #about #services {
-  @extend %bg-o;
+  @extend %bg-g;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -260,7 +260,7 @@
       display: flex;
       flex-direction: column;
 
-      .texts__title {
+      &__title {
         height: 90px;
       }
     }
@@ -275,7 +275,7 @@
       display: flex;
       flex-direction: column;
 
-      .texts__title {
+      &__title {
         height: 90px;
       }
     }
@@ -301,7 +301,7 @@
       display: flex;
       flex-direction: column;
 
-      .texts__title {
+      &__title {
         height: 90px;
       }
     }
@@ -317,6 +317,10 @@
     row-gap: 48px;
     margin: 0;
     padding: 0;
+
+    .texts__title {
+      justify-content: center;
+    }
 
     .box-1 {
       min-width: 320px;

@@ -15,7 +15,7 @@
   background-size: auto; }
 
 #about #services {
-  background-color: orange;
+  background-color: #dfab67;
   background-repeat: repeat;
   background-size: auto; }
 
@@ -243,16 +243,67 @@ body {
       list-style: none; }
     .header__menu ul {
       width: 100%; }
+    .header__menu label {
+      line-height: 72px;
+      display: none; }
+    .header__menu #toggle {
+      display: none; }
+    .header__menu .images__mobile-logo {
+      display: none; }
+    .header__menu .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background: none;
+      height: 100%;
+      width: 100%; }
+      .header__menu .menu__item a {
+        text-decoration: none;
+        font-family: "Hind", sans-serif;
+        font-size: 1rem; }
+      .header__menu .menu__item a:hover {
+        text-decoration: underline; }
+      .header__menu .menu__item a {
+        text-decoration: none;
+        font-family: "Hind", sans-serif;
+        font-size: 1rem; }
+      .header__menu .menu__item a:hover {
+        text-decoration: underline; }
   @media screen and (min-width: 320px) and (max-width: 639px) {
     .header {
-      padding: 10px;
-      flex-wrap: wrap; }
+      padding: 10px 32px 10px 32px; }
       .header .header__menu {
         min-width: 300px;
-        width: 100%; } }
-  @media screen and (min-width: 640px) and (max-width: 767px) {
-    .header .header__menu {
-      min-width: 640px; } }
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap; }
+        .header .header__menu label {
+          display: flex;
+          cursor: pointer;
+          font-size: 40px;
+          line-height: 80px;
+          justify-content: flex-start; }
+        .header .header__menu .images__mobile-logo {
+          display: flex;
+          justify-content: flex-end; }
+        .header .header__menu .menu {
+          display: none; }
+        .header .header__menu #toggle:checked ~ .menu {
+          margin: 10px;
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
+          background-color: #fff;
+          align-items: center;
+          justify-content: space-evenly;
+          width: 100%;
+          height: 160px;
+          border-radius: 6px;
+          z-index: 3; }
+          .header .header__menu #toggle:checked ~ .menu img {
+            display: none; } }
 
 .menu {
   display: flex;
@@ -261,19 +312,17 @@ body {
   background: none;
   height: 100%;
   width: 100%; }
-  .menu__item-w a {
-    color: #fff;
+  .menu__item a {
     text-decoration: none;
     font-family: "Hind", sans-serif;
     font-size: 1rem; }
-  .menu__item-w a:hover {
+  .menu__item a:hover {
     text-decoration: underline; }
-  .menu__item-c a {
-    color: #412236;
+  .menu__item a {
     text-decoration: none;
     font-family: "Hind", sans-serif;
     font-size: 1rem; }
-  .menu__item-c a:hover {
+  .menu__item a:hover {
     text-decoration: underline; }
 
 .footer {
@@ -308,6 +357,8 @@ body {
   .footer__social a {
     text-decoration: none;
     color: #fff; }
+  .footer__social a:hover {
+    color: #dfab67; }
   @media screen and (min-width: 320px) and (max-width: 639px) {
     .footer .footer__data {
       width: 320px; }
@@ -651,7 +702,7 @@ body {
     #about #team .container .box-3 .texts {
       display: flex;
       flex-direction: column; }
-      #about #team .container .box-3 .texts .texts__title {
+      #about #team .container .box-3 .texts__title {
         height: 90px; }
   #about #team .container .box-4 {
     grid-column: 1/3;
@@ -660,7 +711,7 @@ body {
     #about #team .container .box-4 .texts {
       display: flex;
       flex-direction: column; }
-      #about #team .container .box-4 .texts .texts__title {
+      #about #team .container .box-4 .texts__title {
         height: 90px; }
   #about #team .container .box-5 {
     grid-column: 3/5;
@@ -676,7 +727,7 @@ body {
     #about #team .container .box-7 .texts {
       display: flex;
       flex-direction: column; }
-      #about #team .container .box-7 .texts .texts__title {
+      #about #team .container .box-7 .texts__title {
         height: 90px; }
   @media screen and (min-width: 320px) and (max-width: 639px) {
     #about #team .container {
@@ -689,6 +740,8 @@ body {
       row-gap: 48px;
       margin: 0;
       padding: 0; }
+      #about #team .container .texts__title {
+        justify-content: center; }
       #about #team .container .box-1 {
         min-width: 320px;
         padding: 20px;
@@ -1302,21 +1355,17 @@ textarea.input100 {
   grid-template-areas: "header" "contact-us" "footer"; }
 
 #login #log .container .box-1 {
-  grid-column: 1/-1;
-  grid-row: 1; }
+  grid-column: 1/2;
+  grid-row: 1;
+  display: flex;
+  justify-content: center; }
 
 #login #log .container .box-2 {
-  grid-column: 1/2;
-  grid-row: 2;
-  display: flex;
-  justify-content: center; }
-
-#login #log .container .box-3 {
   grid-column: 2/3;
-  grid-row: 2;
+  grid-row: 1;
   display: flex;
   justify-content: center; }
-  #login #log .container .box-3 .login {
+  #login #log .container .box-2 .login {
     width: 260px;
     height: 320px;
     border-radius: 8px;
@@ -1325,15 +1374,15 @@ textarea.input100 {
     justify-content: space-evenly;
     align-items: center;
     padding: 30px 30px; }
-    #login #log .container .box-3 .login .texts {
+    #login #log .container .box-2 .login .texts {
       display: flex;
       justify-content: center;
       align-items: center;
       background: none; }
-      #login #log .container .box-3 .login .texts h2 {
+      #login #log .container .box-2 .login .texts h2 {
         color: #412236;
         background: none; }
-    #login #log .container .box-3 .login .login__form {
+    #login #log .container .box-2 .login .login__form {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -1341,12 +1390,12 @@ textarea.input100 {
       width: 100%;
       height: 100%;
       background: none; }
-      #login #log .container .box-3 .login .login__form label {
+      #login #log .container .box-2 .login .login__form label {
         display: block;
         color: #412236;
         background: none;
         padding-top: 10px; }
-      #login #log .container .box-3 .login .login__form input {
+      #login #log .container .box-2 .login .login__form input {
         display: block;
         width: 100%;
         background: none;
@@ -1357,14 +1406,14 @@ textarea.input100 {
         padding-left: 14px;
         border: none;
         border-bottom: 1px solid #412236; }
-      #login #log .container .box-3 .login .login__form fieldset {
+      #login #log .container .box-2 .login .login__form fieldset {
         display: block;
         outline: none;
         border: none;
         background: none; }
-      #login #log .container .box-3 .login .login__form .inputLabel {
+      #login #log .container .box-2 .login .login__form .inputLabel {
         background: none; }
-  #login #log .container .box-3 .login__form [type="button"] {
+  #login #log .container .box-2 .login__form [type="button"] {
     display: block;
     min-width: 120px;
     margin: 30px auto 10px;
@@ -1374,7 +1423,7 @@ textarea.input100 {
     border: none;
     color: #e33f5b;
     background: #f8dcda; }
-  #login #log .container .box-3 .login__form [type="button"]:hover {
+  #login #log .container .box-2 .login__form [type="button"]:hover {
     cursor: pointer; }
 
 @media screen and (min-width: 320px) and (max-width: 639px) {

@@ -1,6 +1,5 @@
 //HEADER
 $header: ".header";
-$menu: ".menu";
 
 #{$header} {
   grid-column: 1/-1;
@@ -23,23 +22,99 @@ $menu: ".menu";
     ul {
       width: 100%;
     }
+
+    label {
+      line-height: 72px;
+      display: none;
+    }
+
+    #toggle {
+      display: none;
+    }
+
+    .images__mobile-logo {
+      display: none;
+    }
+
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background: none;
+      height: 100%;
+      width: 100%;
+
+      &__item a {
+        text-decoration: none;
+        font-family: $font-secondary;
+        font-size: $font-menu-size;
+      }
+      &__item a:hover {
+        text-decoration: underline;
+      }
+
+      &__item a {
+        text-decoration: none;
+        font-family: $font-secondary;
+        font-size: $font-menu-size;
+      }
+      &__item a:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   @include breakpoint(mobile) {
-    padding: 10px;
-    flex-wrap: wrap;
+    padding: 10px 32px 10px 32px;
 
     .header__menu {
       min-width: 300px;
       width: 100%;
-    }
-  }
-  @include breakpoint(tablet) {
-    .header__menu {
-      min-width: 640px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      label {
+        display: flex;
+        cursor: pointer;
+        font-size: 40px;
+        line-height: 80px;
+        justify-content: flex-start;
+      }
+
+      .images__mobile-logo {
+        display: flex;
+
+        justify-content: flex-end;
+      }
+
+      .menu {
+        display: none;
+      }
+
+      #toggle:checked ~ .menu {
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        background-color: $color-w;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 160px;
+        border-radius: 6px;
+        z-index: 3;
+
+        img {
+          display: none;
+        }
+      }
     }
   }
 }
+
+$menu: ".menu";
 
 #{$menu} {
   display: flex;
@@ -49,23 +124,21 @@ $menu: ".menu";
   height: 100%;
   width: 100%;
 
-  &__item-w a {
-    color: $color-w;
+  &__item a {
     text-decoration: none;
     font-family: $font-secondary;
     font-size: $font-menu-size;
   }
-  &__item-w a:hover {
+  &__item a:hover {
     text-decoration: underline;
   }
 
-  &__item-c a {
-    color: $color-p;
+  &__item a {
     text-decoration: none;
     font-family: $font-secondary;
     font-size: $font-menu-size;
   }
-  &__item-c a:hover {
+  &__item a:hover {
     text-decoration: underline;
   }
 }

@@ -46,6 +46,10 @@ $social: ".social";
     color: $color-w;
   }
 
+  &__social a:hover {
+    color: $color-f;
+  }
+
   @include breakpoint(mobile) {
     .footer__data {
       width: 320px;
